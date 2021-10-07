@@ -5,7 +5,8 @@
         const router = new VueRouter({
            routes : [
                { path: '/', component: Home },
-               { path: '/about', component: About }
+               { path: '/about', component: About },
+               { path: '/img/:id', component: Image },
            ]
         });
         app = new Vue({router: router,
@@ -28,42 +29,47 @@
         template:`
         <div>
         <div class='title'>
-        Nick and Luke
+        nick & luke
         </div>
-        <div>lukeandnick.com was taken</dev>
-        <div>
+        <div>october 1, 2022 | watertown, ma</div>
+        <br>
+        </div>
         `
     });
     var About = Vue.component('nta-aboutme', {
 		template: `<div>
         <br>
         <br>
-        <p>Nick Andersen is an audio producer living in Cambridge, MA.</p>
-    
-        <p>He produces the Webby Award-winning <a href="https://www.pbs.org/wgbh/masterpiece/podcasts/">MASTERPIECE Studio podcast</a> for the long-running PBS telelvision drama, MASTERPIECE, and is also the senior producer of <a href="https://www.ministryofideas.org/">
-        Ministry of Ideas</a>, a founding member of the <a href="https://www.hubspokeaudio.org/">Hub & Spoke Podcast Collective.</a></p>
-        <p>Previously, he was a producer for the WBUR and NPR talk show, <a href="http://www.wbur.org/onpoint">On Point Radio.</a></p>
-        <p>A 2012 graduate of the University of North Carolina at Chapel Hill, he is a proud native of the Metro Detroit region.</p>
-        <p>You can read his undergraduate thesis on mid-20th Century American opera history, "Too Real To Be Funny," <a href="/img/AndersenThesisFinal.pdf">here.</a></p>
-        <p>Contact him at nkandersen AT gmail DOT com.</p>
-        <p>You can read his resume <a href="/img/NickAndersen_CV2018.pdf">here.</a></p>
+        <p>We're so glad to celebrate our wedding with you next year.</p>
+        <p>We met at a potluck dinner years ago here in Cambridge, and it feels right to bring all our favorite people together in this place where we've built our home and lives.</p>
+        <p>There will be information here regarding lodging, logistics, and more soon. But for now, we're so excited to see you at the Commander's Masion in Watertown on October 1, 2022.</p>
         <br>
         <router-link class='nav' to="/">back</router-link>
 		</div>`
 	})
+
+    var Image = Vue.component('nta-image', {
+        template: `<div>
+        <img class='bigimg' @click="clickimage" v-bind:src='"img/" + $route.params.id'>
+        
+        </div>
+        `,
+        methods: {
+            clickimage: function() {
+                this.$router.push("/");
+            }
+        }
+    })
 	
     var Home = Vue.component('nta-home', {
         template: `<div>
         <div class="middlestuff">
         <div class='icons'><router-link class='nav' to="/about">about</router-link></p></div>
         <div class='home'>
-        <div v-for="i in images"><img class='instaimg' v-bind:style="i['style']" v-bind:src="i['url']"></div>
+        <div v-for="i in images"><img @click="clickimage(i)" class='instaimg' v-bind:style="i['style']" v-bind:src="i['url']"></div>
         </div>
 		<div class="icons">
         <p align='right'>
-		<a href="https://twitter.com/nicktheandersen" target="_blank" ><img class="theicons" title="Twitter" src="https://socialmediawidgets.files.wordpress.com/2014/03/01_twitter1.png" alt="Twitter" width="35" height="35" scale="0"></a>
-		<a href="https://instagram.com/nicktheandersen" target="_blank"><img class="theicons" title="Instagram" src="https://socialmediawidgets.files.wordpress.com/2014/03/10_instagram1.png" alt="Instagram" width="35" height="35" scale="0"></a>
-		<a href="https://www.linkedin.com/in/nick-andersen-61661963" target="_blank"><img class="theicons" title="Instagram" src="https://socialmediawidgets.files.wordpress.com/2014/03/07_linkedin1.png" alt="Linkedin" width="35" height="35" scale="0"></a>
         </p>
 		</div>
         </div>
@@ -77,6 +83,9 @@
             }
         },
         methods: {
+            clickimage: function(i) {
+                this.$router.push(i.url);
+                },
             determine_desired_images: function() {
                 // Probably better place/way to do this
                 if (screen.width < 400) {
@@ -93,31 +102,6 @@
                 var style = 'width:' + 100 / this.desired_images + '%';
                 return {"url":url, "style":style}
             },
-            update_images: function() {
-                jQuery.ajax('https://instagram.com/nicktheandersen').done((response) => {
-                    response = response.replace(/\n/g,' ');
-                    // Fingers crossed that instagram doesn't have some XSS bullshit in here...
-                    var match = response.match(/window._sharedData = (.*?);<\/script>/);
-                    var data = JSON.parse(match[1]);
-                    // Oh yeah, there's *no* way this will ever break
-                    // I apologize
-                    var edges = data.entry_data.ProfilePage[0].graphql.user.edge_owner_to_timeline_media.edges;
-					edges.shuffle();
-					edges.forEach( (edge) => {
-                        if (this.images.length < this.desired_images ) {
-                            var height = edge.node.dimensions.height;
-                            var width = edge.node.dimensions.width;
-
-                            if (this.is_approximately_square(height, width) ) {
-                                this.images.push(this.image_object(edge.node.display_url))
-                            } else {
-                                console.log("Did not use " + edge.node.display_url + " (" + height + " x " + width + ")");
-                            }
-
-                        }
-                    });
-                })
-            },
             backfill_images: function() {
                 var default_nums = [];
                 for (var i=0; i<this.desired_images; i++)
@@ -126,7 +110,7 @@
 
                 default_nums.forEach( (i) => {
                     if (this.images.length < this.desired_images) {
-                        this.images.push(this.image_object("/img/fallback_" + i + ".jpg"))
+                        this.images.push(this.image_object("/img/" + i + ".jpg"))
                     }
                 });
 

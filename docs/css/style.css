@@ -1,10 +1,16 @@
 /* Default font */
 html,body { 
     height:100%; 
-    overflow: hidden; 
+    /*overflow: hidden; */
+}
+.nooverflow {
+    overflow: hidden;
 }
 * {
 font-family: "TW Cen MT", "Trebuchet MS", sans-serif;
+}
+.title {
+color:rgb(50 79 134)
 }
 .container {
     margin-left: 100px;
@@ -42,4 +48,13 @@ a.nav:visited {
     float: left;
     padding-top: 0%;
     min-width:1px;
+}
+
+.bigimg {
+    display: block;
+    float: left;
+    padding-top: 0%;
+    min-width:1px;
+    width: 1000px;
+    height: 1000px;
 }
