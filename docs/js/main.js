@@ -42,7 +42,7 @@
         <br>
         <p>We're so glad to celebrate our wedding with you next year.</p>
         <p>We met at a potluck dinner years ago here in Cambridge, and it feels right to bring all our favorite people together in this place where we've built our home and lives.</p>
-        <p>There will be information here regarding lodging, logistics, and more soon. But for now, we're so excited to see you at the Commander's Masion in Watertown on October 1, 2022.</p>
+        <p>There will be information here regarding lodging, logistics, and more soon. But for now, we're so excited to see you at the Commander's Mansion in Watertown on October 1, 2022.</p>
         <br>
         <router-link class='nav' to="/">back</router-link>
 		</div>`
@@ -84,7 +84,8 @@
         },
         methods: {
             clickimage: function(i) {
-                this.$router.push(i.url);
+                url = i.url.replace("-small", "")
+                this.$router.push(url);
                 },
             determine_desired_images: function() {
                 // Probably better place/way to do this
@@ -110,7 +111,7 @@
 
                 default_nums.forEach( (i) => {
                     if (this.images.length < this.desired_images) {
-                        this.images.push(this.image_object("/img/" + i + ".jpg"))
+                        this.images.push(this.image_object("/img/" + i + "-small.jpg"))
                     }
                 });
 
