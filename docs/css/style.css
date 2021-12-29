@@ -37,8 +37,8 @@ a.nav:visited {
   width: 100%;
 }
 .icons {
-    margin-left:110px;
-    margin-right:110px;
+    /*margin-left:110px;
+    margin-right:110px;*/
 }
 .theicons {
     margin-top:10px;
@@ -50,6 +50,9 @@ a.nav:visited {
     min-width:1px;
 }
 
+.title {
+cursor:pointer;
+}
 .bigimg {
     display: block;
     float: left;

@@ -6,6 +6,8 @@
            routes : [
                { path: '/', component: Home },
                { path: '/about', component: About },
+               { path: '/lodging', component: Lodging },
+               { path: '/schedule', component: Schedule },
                { path: '/img/:id', component: Image },
            ]
         });
@@ -28,29 +30,63 @@
     Vue.component('nta-header',{
         template:`
         <div>
-        <div class='title'>
+        <div @click="gohome" class='title'>
         nick & luke
         </div>
         <div>october 1, 2022 | watertown, ma</div>
         <br>
+        <nta-nav-buttons></nta-nav-buttons>
         </div>
-        `
+        `,
+        methods: {
+            gohome: function() {
+                this.$router.push("/");
+
+            }
+        }
     });
-    var About = Vue.component('nta-aboutme', {
+    var Lodging = Vue.component('nta-lodging', {
 		template: `<div>
+        <br>
+        <br>
+        <p>There are plenty of places to stay in the area!</p>
+        <p>We have reserved blocks of rooms at two local hotels: </p>
+        <ul>
+           <li><strong><a target="_blank" href="https://www.phgsecure.com/IBE/bookingRedirect.ashx?propertyCode=BOSCH&group=shnk0930&arrivalDate=09-30-2022&departureDate=10-02-2022&numberOfNights=2&numberOfAdults=1">The Charles Hotel</a></strong> is about a mile away in lively Harvard Square.</li>
+           <li><strong><a target="_blank" href="https://www.hilton.com/en/attend-my-event/boswwhx-amb-87679a26-1374-4c3e-8bd0-1cd9a123c754/">Hampton Inn and Suites, Watertown</a></strong> is within walking distance of the venue.</li>
+        </ul>
+        <p>You are also free to call either hotel directly and ask for the Andersen-Massa Block Rate.</p>
+
+        <p>If you have questions about these or any other hotel/vacation rental/etc. you are looking at in the area, feel free to reach out to us.</p>
+        <br>
+		</div>`
+	})
+
+    var About = Vue.component('nta-aboutme', {
+        template: `<div>
         <br>
         <br>
         <p>We're so glad to celebrate our wedding with you next year.</p>
         <p>We met at a potluck dinner years ago here in Cambridge, and it feels right to bring all our favorite people together in this place where we've built our home and lives.</p>
         <p>There will be information here regarding lodging, logistics, and more soon. But for now, we're so excited to see you at the Commander's Mansion in Watertown on October 1, 2022.</p>
         <br>
-        <router-link class='nav' to="/">back</router-link>
-		</div>`
-	})
+        </div>`
+    })
+
+    var Schedule = Vue.component('nta-schedule', {
+        template: `<div>
+        <br>
+        <br>
+        <p>This is information about the schedule</p>
+        <br>
+        </div>`
+    })
 
     var Image = Vue.component('nta-image', {
         template: `<div>
+        <div>
         <img class='bigimg' @click="clickimage" v-bind:src='"img/" + $route.params.id'>
+        </div>
         
         </div>
         `,
@@ -60,11 +96,21 @@
             }
         }
     })
+
+    var NavButtons = Vue.component('nta-nav-buttons', {
+    	template: `
+    	<div>
+        <div class='icons'><router-link class='nav' to="/about">about</router-link></div>
+        <div class='icons'><router-link class='nav' to="/lodging">lodging</router-link></div>
+        <div class='icons'><router-link class='nav' to="/schedule">schedule</router-link></div>
+        </div>
+
+    	`
+    })
 	
     var Home = Vue.component('nta-home', {
         template: `<div>
         <div class="middlestuff">
-        <div class='icons'><router-link class='nav' to="/about">about</router-link></p></div>
         <div class='home'>
         <div v-for="i in images"><img @click="clickimage(i)" class='instaimg' v-bind:style="i['style']" v-bind:src="i['url']"></div>
         </div>
