@@ -3,4 +3,4 @@
 # Run the server in dev for testing
 
 cd docs
-python -m SimpleHTTPServer 8000
+python -m SimpleHTTPServer 9000
