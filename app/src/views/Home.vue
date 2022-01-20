@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <img alt="Nick and Luke" src="../assets/4-small.jpg">
     <HomePage/>
   </div>
 </template>

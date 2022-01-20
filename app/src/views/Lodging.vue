@@ -1,6 +1,5 @@
 <template>
   <div class="lodging">
-    <h1>Lodging</h1>
     <p>There are plenty of places to stay in the area!</p>
     <p>We have reserved blocks of rooms at two local hotels: </p>
     <ul>
