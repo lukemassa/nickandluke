@@ -7,7 +7,9 @@
     <br>
     <router-link to="/">Home</router-link> |
     <router-link to="/lodging">Lodging</router-link> |
-    <router-link to="/schedule">Schedule</router-link>
+    <router-link to="/schedule">Schedule</router-link> |
+    <router-link to="/faq">FAQs</router-link>
+
   </div>
   <router-view/>
 </template>
