@@ -9,7 +9,7 @@ set -e
 set -o pipefail
 
 function usage() {
-    echo "Usage: build|install"
+    echo "Usage: build|install|serve"
     exit 1
 }
 
@@ -27,6 +27,11 @@ then
     rm -rf docs
     cp -r app/dist docs
     echo 'nickandluke.com' > docs/CNAME
+elif [[ "$action" == "serve" ]]
+then
+    cd app
+    ./node_modules/.bin/vue-cli-service serve
+
 elif [[ "$action" == "install" ]]
 then
     
