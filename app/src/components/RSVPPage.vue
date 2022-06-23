@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <p>
-      Enter one name from the invite
+      Enter one name as it appears on the invite
     </p>
     <input name="Name" v-model="guestName" v-on:keyup.enter="submit"><br><br>
     <button ref="submit" v-on:click="submit">Submit</button>
@@ -22,7 +22,7 @@ export default {
   },
   methods: {
   submit : function(){
-    fetch("https://tranquil-refuge-59251.herokuapp.com/guest?name=" + this.guestName.toLowerCase())
+    fetch("https://nickandluke-api.herokuapp.com/guest?name=" + this.guestName.toLowerCase())
       .then(async response => {
         const data = await response.json();
         if (!data["valid"]) {
