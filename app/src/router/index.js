@@ -21,10 +21,20 @@ const routes = [
     component: () => import('../views/Schedule.vue')
   },
   {
+    path: '/registry',
+    name: 'Registry',
+    component: () => import('../views/Registry.vue')
+  },
+  {
     path: '/faq',
     name: 'FAQs',
     component: () => import('../views/FAQ.vue')
-  }
+  },
+  {
+    path: '/thingstodo',
+    name: 'ThingsToDo',
+    component: () => import('../views/ThingsToDo.vue')
+  },
 ]
 
 const router = createRouter({
