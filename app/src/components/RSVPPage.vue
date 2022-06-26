@@ -29,7 +29,7 @@ export default {
           alert("Could not find '" + this.guestName + "', please try again")
           return
         }
-        window.open(data['form'], '_blank');
+        window.location.replace(data["form"]);
       })
   }
   }
