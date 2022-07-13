@@ -2,7 +2,7 @@
 
   <div id="nav">
     <h1>nick & luke</h1>
-    <h3>october 1, 2022 | watertown, ma | #nickandluke2022</h3>
+    <h3>october 1, 2022 | watertown, ma | <a href="https://www.instagram.com/explore/tags/nickandluke2022/">#nickandluke2022</a></h3>
     <img alt="Nick and Luke" src="./assets/4-small.jpg">
     <br>
     <router-link to="/">Home</router-link> |
