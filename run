@@ -24,9 +24,24 @@ then
     cd app 
     ./node_modules/.bin/vue-cli-service build --mode production --target app --dashboard
     cd ..
+    tokeep=$(mktemp -d /tmp/nickandluke_tokeep.XXXXXXXXXX)
+    cp docs/CNAME $tokeep/.
+    mkdir $tokeep/{css,js}
+    for oldfile in $(cat docs/index.html | tr ' ' '\n' | egrep 'href|src' | cut -f 2 -d '"' | sort | uniq)
+    do
+        if [[ "$oldfile" == *.js ]]
+        then
+            js_map_file="$oldfile.map"
+            if [[ -f docs/$js_map_file ]]
+            then
+                cp docs/$js_map_file $tokeep/$js_map_file
+            fi
+        fi
+        cp docs/$oldfile $tokeep/$oldfile
+    done
     rm -rf docs
     cp -r app/dist docs
-    echo 'nickandluke.com' > docs/CNAME
+    rsync -av $tokeep/ docs
 elif [[ "$action" == "serve" ]]
 then
     cd app
