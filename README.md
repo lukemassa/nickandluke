@@ -5,6 +5,7 @@ Code for https://nickandluke.com/. Uses [Vue](https://vuejs.org/) and [Github Pa
 ## Development
 
 `./run install`
+
 `./run serve`
 
 Then edit files, mostly in `app/src`.
@@ -13,6 +14,6 @@ Then edit files, mostly in `app/src`.
 
 `./run build`
 
-This does a Vue build and puts the output in docs/.
+This does a Vue build and puts the output in `docs/`.
 
 It also keeps an old copy of js so any in-flight requests won't fail.
