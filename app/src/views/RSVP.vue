@@ -25,7 +25,7 @@ export default {
           alert("Could not find '" + this.guestName + "', please try again")
           return
         }
-        window.location.replace(data["form"]);
+        alert("RSVP form is closed. Please reach out to " + data["email"] + " if you have any questions")
       })
   }
   }
