@@ -12,7 +12,8 @@
     <router-link to="/schedule">Schedule</router-link> |
     <router-link to="/thingstodo">Things To Do</router-link> |
     <router-link to="/registry">Registry</router-link> |
-    <router-link to="/faq">FAQs</router-link>
+    <router-link to="/faq">FAQs</router-link> |
+    <router-link to="/contact">Contact</router-link>
 
   </div>
   <router-view/>
