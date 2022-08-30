@@ -36,6 +36,11 @@ const routes = [
     component: () => import('../views/FAQ.vue')
   },
   {
+    path: '/transit',
+    name: 'Public Transit',
+    component: () => import('../views/Transit.vue')
+  },
+  {
     path: '/thingstodo',
     name: 'ThingsToDo',
     component: () => import('../views/ThingsToDo.vue')

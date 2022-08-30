@@ -1,5 +1,5 @@
 <template>
-
+<div>
   <div id="nav">
     <h1>nick & luke</h1>
     <h3>october 1, 2022 | watertown, ma | <a href="https://www.instagram.com/explore/tags/nickandluke2022/">#nickandluke2022</a></h3>
@@ -8,6 +8,7 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/rsvp">RSVP</router-link> |
     <router-link to="/lodging">Travel & Lodging</router-link> |
+    <router-link to="/transit">Public Transit</router-link> <br><br>
     <router-link to="/schedule">Schedule</router-link> |
     <router-link to="/thingstodo">Things To Do</router-link> |
     <router-link to="/registry">Registry</router-link> |
@@ -15,6 +16,7 @@
 
   </div>
   <router-view/>
+  </div>
 </template>
 
 <style>
