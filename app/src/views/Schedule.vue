@@ -1,7 +1,7 @@
 <template>
   <div class="schedule">
     <ul>
-      <li><b>5pm Friday, September 30th</b><br>Welcome Cocktails at <a href="https://www.charleshotel.com/dining/regattabar" target="_blank">The Regatta Bar at The Charles Hotel</a> in Cambridge, MA<br><i>Cocktail casual attire</i><br><i>Drinks and light bites, see <router-link to="/thingstodo">here</router-link> for local dinner recommendations</i></li>
+      <li><b>5pm Friday, September 30th</b><br>Welcome Cocktails at <a href="https://www.charleshotel.com" target="_blank">The Regatta Bar at The Charles Hotel</a> in Cambridge, MA<br><i>Cocktail casual attire</i><br><i>Drinks and light bites, see <router-link to="/thingstodo">here</router-link> for local dinner recommendations</i></li>
       <br>
       <li><b>4pm Saturday, October 1st</b><br>Wedding and Reception at <a href="https://www.commandersmansion.com/" target="_blank">The Commander's Mansion</a> in Watertown, MA<br><i>Black-tie optional</i></li>
       <br>
