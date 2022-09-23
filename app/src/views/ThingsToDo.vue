@@ -92,11 +92,6 @@ export default {
                 "name": "Darwin's",
                 "link": "https://www.darwinsltd.com/",
                 "description": "Delicious coffee and delicious breakfast sandwiches and pastries"
-            },
-            {
-                "name": "Juliet",
-                "link": "https://www.julietsomerville.com/",
-                "description": "Our favorite brunch place with a distinctive Bay Area vibe."
             }
         ]
       }

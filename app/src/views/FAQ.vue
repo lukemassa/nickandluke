@@ -2,7 +2,7 @@
   <div class="faq">
     <ul>
       <li><b>What Pandemic Precautions Will Be In Place?</b>
-      <br>We require that all guests be fully vaccinated against COVID-19, and take an antigen or PCR test within 48 hours of the ceremony. Masks are welcome but not required.
+      <br>We require that all guests be fully vaccinated against COVID-19, and have a negative rapid <i>or</i> PCR test within 48 hours of the ceremony. Masks are welcome but not required. We trust our guests to follow these guidelines and will not be collecting vaccine cards or test results.
       <p>The wedding ceremony and reception will be outside under a tent. The post-ceremony cocktail hour will be partially inside the mansion, and the after-party and Friday night welcome cocktails will be entirely inside the Charles Hotel.</p>
       <p>We recognize that conditions may change in the next few months, and will keep our guests up to date via this page as well as email. Feel free to <router-link to="/contact">reach out</router-link> in the interim if you have additional questions.</p>
       </li>
