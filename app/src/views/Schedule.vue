@@ -5,7 +5,7 @@
       <br>
       <li><b>4pm Saturday, October 1st</b><br>Wedding and Reception at <a href="https://www.commandersmansion.com/" target="_blank">The Commander's Mansion</a> in Watertown, MA<br><i>Black-tie optional</i></li>
       <br>
-      <li><b>10:30pm Saturday, October 1st</b><br>After Party at <a href="https://www.charleshotel.com/dining/noir" target="_blank">The Noir Bar at The Charles Hotel</a> in Cambridge, MA<br><i>Limited space, please <router-link to="/contact">reach out</router-link> for info</i></li>
+      <li><b>10:30pm Saturday, October 1st</b><br>After Party at <a href="https://www.charleshotel.com/dining/noir" target="_blank">The Noir Bar at The Charles Hotel</a> in Cambridge, MA<br><i>Shuttles from the reception at 9:45 and 10:15<br>Limited space, please <router-link to="/contact">reach out</router-link> for info</i></li>
       <br>
       <li><b>11am Sunday, October 2nd</b><br>Farewell Coffee and Bagels at our apartment in <a href="https://www.google.com/maps/place/Inman+Square,+Cambridge,+MA/@42.3730489,-71.1002989,17z" target="_blank">Inman Square</a>, Cambridge, MA<br><i>See printed invite for address</i></li>
 

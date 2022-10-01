@@ -8,7 +8,7 @@
          </ul>
          <p>You are also free to call either hotel directly and ask for the Andersen-Massa Block Rate.</p>
  
-         <p>In general, we recommend getting around the area on public transportation or ride share apps. There will be ample parking at the Commander's Mansion on Saturday, but otherwise parking in the Boston area is very limited.</p>
+         <p>In general, we recommend getting around the area on <router-link to="/transit">public transportation</router-link>  or ride share apps. There will be ample parking at the Commander's Mansion on Saturday, but otherwise parking in the Boston area is very limited.</p>
         <br>
   </div>
 </template>
