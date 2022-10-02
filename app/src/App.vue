@@ -6,14 +6,9 @@
     <img alt="Nick and Luke" src="./assets/4-small.jpg">
     <br>
     <router-link to="/">Home</router-link> |
-    <router-link to="/rsvp">RSVP</router-link> |
-    <router-link to="/lodging">Travel & Lodging</router-link> |
-    <router-link to="/transit">Public Transit</router-link> <br><br>
     <router-link to="/schedule">Schedule</router-link> |
     <router-link to="/thingstodo">Things To Do</router-link> |
     <router-link to="/registry">Registry</router-link> |
-    <router-link to="/faq">FAQs</router-link> |
-    <router-link to="/contact">Contact</router-link>
 
   </div>
   <router-view/>

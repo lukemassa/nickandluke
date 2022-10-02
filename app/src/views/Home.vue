@@ -1,10 +1,10 @@
 <template>
   <div class="hello">
     <p>
-      Today's the big day!
+    Thank you so much for celebrating with us. It was such a special day and it meant so much to have everyone together.
     </p>
     <p>
-     We met at a potluck dinner years ago here in Cambridge, and it feels right to bring all our favorite people together in this place where we've built our home and lives.
+    
     </p>
 
   </div>
