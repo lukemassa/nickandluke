@@ -8,7 +8,6 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/schedule">Schedule</router-link> |
     <router-link to="/thingstodo">Things To Do</router-link> |
-    <router-link to="/registry">Registry</router-link> |
 
   </div>
   <router-view/>
