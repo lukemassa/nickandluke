@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunknickandluke"]=self["webpackChunknickandluke"]||[]).push([[322],{322:function(n,e,u){u.r(e),u.d(e,{default:function(){return i}});var t=u(252);const c={class:"rsvp"};function r(n,e){const u=(0,t.up)("router-link");return(0,t.wg)(),(0,t.iD)("div",c,[(0,t._)("p",null,[(0,t.Uk)(" The RSVP form is now closed! Please "),(0,t.Wm)(u,{to:"/contact"},{default:(0,t.w5)((()=>[(0,t.Uk)("reach out")])),_:1}),(0,t.Uk)(" if you have any questions. ")])])}var s=u(744);const a={},o=(0,s.Z)(a,[["render",r]]);var i=o}}]);
+//# sourceMappingURL=322.e68f4b5d.js.map
